@@ -141,6 +141,20 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
     setTimeout(() => setCopied(false), 2500);
   };
 
+  const openWhatsApp = () => {
+    if (!submittedBrief) return;
+    const srvNames = SERVICES_CATALOGUE.filter((s) =>
+      submittedBrief.data.selectedServices.includes(s.id)
+    )
+      .map((s) => s.name)
+      .join(', ');
+
+    const text = `Halo Tim Teduh dalam cerita,\n\nSaya ingin berkonsultasi permohonan desain:\n• No. Ref: ${submittedBrief.id}\n• Klien: ${submittedBrief.data.clientName}\n• Brand: ${submittedBrief.data.brandName}\n• Layanan: ${srvNames}\n• Estimasi: ${timeline.formatted}\n\n*Catatan Brief:*\n${submittedBrief.data.projectDescription}`;
+
+    const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div
       role="dialog"
@@ -236,12 +250,20 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                 <button
                   type="button"
                   onClick={copyBriefText}
-                  className="h-11 px-6 bg-[#0051ae] hover:bg-[#0653b6] text-[#ffffff] font-bold text-[13px] uppercase tracking-wider flex items-center gap-2"
+                  className="h-11 px-5 bg-[#0051ae] hover:bg-[#0653b6] text-[#ffffff] font-bold text-[13px] uppercase tracking-wider flex items-center gap-2"
                 >
                   <span className="material-symbols-outlined text-[18px]">
                     {copied ? 'check' : 'content_copy'}
                   </span>
-                  <span>{copied ? 'Tersalin ke Clipboard' : 'Salin Ringkasan Brief'}</span>
+                  <span>{copied ? 'Tersalin' : 'Salin Ringkasan Brief'}</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={openWhatsApp}
+                  className="h-11 px-5 bg-[#22c55e] hover:bg-[#16a34a] text-[#ffffff] font-bold text-[13px] uppercase tracking-wider flex items-center gap-2"
+                >
+                  <span className="material-symbols-outlined text-[18px]">chat</span>
+                  <span>Kirim via WhatsApp</span>
                 </button>
                 <button
                   type="button"
@@ -249,7 +271,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                     setSubmittedBrief(null);
                     onClose();
                   }}
-                  className="h-11 px-6 bg-[#ffffff] hover:bg-[#f7f7f7] border border-[#cccccc] text-[#1a1a1a] font-bold text-[13px] uppercase tracking-wider"
+                  className="h-11 px-5 bg-[#ffffff] hover:bg-[#f7f7f7] border border-[#cccccc] text-[#1a1a1a] font-bold text-[13px] uppercase tracking-wider"
                 >
                   Selesai
                 </button>

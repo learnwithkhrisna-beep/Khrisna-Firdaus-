@@ -70,6 +70,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onScrollToStanda
                   <img
                     className="w-full aspect-[4/3] object-cover transition-transform duration-500 hover:scale-[1.02]"
                     alt="Editorial graphic design showcase mockup displaying neat print stationery, minimalist corporate identity guide, and typography layout sheets on an architect studio desk in daylight with blue and deep slate neutral elements."
+                    loading="eager"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB2qRuSa3matipynm8V8RgAOWaRpQ--GC4Ljl68gm5RjCmNGB74r3IkwAoAfrpkYvmjZa2aiaC9-tg1qB-MuZW4OJg-ynT4iQF8PBDGWQE0fEUH1dX64oAJLve4iIraH1hcFzF3R_Kniw_5DpYVKEm0iUh_X1lJYkKlob-GPzWhKs-SnUR87ADWXqSH4ztYcONPJc7XxzQ-PRsUVZApgc65iQ63E-WOVtBXf690ZvMohDgf_9U4w"
                   />
                 </div>

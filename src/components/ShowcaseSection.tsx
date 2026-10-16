@@ -70,6 +70,9 @@ export const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({ onOpenSpecs })
                   <img
                     className="w-full aspect-[4/5] object-cover transition-transform duration-500 hover:scale-[1.02]"
                     alt="Editorial overhead photograph of brand identity packaging box layout with clear measurement indicators, color swatches in blue and red tones, and craft design tools."
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpBO1KIeYi6zcJ7ZXy9-AYPqrtLWZLWLTf47iyH2fov1UcvndTZ8jj58VSIgEKCbQWT-dDVmPnPzIuBnUidGeVx48SuQ8sEJh0ZgZMb6GJLar9pNwexvEaC6kQcujn5zd0QPeBdHzpmm_mLBikl6d03U3O9t_eYn-kDryX9sdr3t0uGLbMRbQ2mKy9TKnjfoWbAOODa24hIFpvMz0sYWCSb4gOmOn96UVZHPfYP7gLKcavm5sJJQ"
                   />
                 </div>
@@ -85,6 +88,9 @@ export const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({ onOpenSpecs })
                   <img
                     className="w-full aspect-[4/5] object-cover transition-transform duration-500 hover:scale-[1.02]"
                     alt="Minimalist typography poster layout hung neatly on an exhibition concrete wall, displaying clean Swiss-style layout hierarchy with precise margins and editorial spacing."
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhY7N7COuVLEcpUSLakvsa7uHG7GA4dlrhM2dFCpWWUe5z9l1d_q2ZhQ6KYJZydKRrk404UWEp-76rfT0mZde6YWVqBI9ao_vSp1R1O0fB8mdxiCY0zzfbjey3YgQiBfsp5INRbplPTvIFaRALp2UHD098hwaG2vY9DYkse8YWqFDwOVrMBJz4G8g_yESGeU0333QGXwij6ADqYNBmyn5T4f1xXP9-l-oYgztq8ACpbi3cCGb3JA"
                   />
                 </div>
